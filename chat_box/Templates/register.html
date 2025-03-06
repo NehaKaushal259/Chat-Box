@@ -3,15 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
+    <title>Document</title>
     <link rel="stylesheet" href="../static/css/login.css">
 </head>
 <body>
+    
+
 
     <div class="container">
+
+        {% if messages %}
+            {% for message in messages %}
+                <p style="color: red;">{{ message }}</p>
+            {% endfor %}
+        {% endif %}
+
+
         <div class="login-form">
-            <h2>Login Page</h2>
-            <form method="POST" action="{% url 'login' %}">
+            <h2>Register Page</h2>
+            <form method="POST" action="{% url 'register' %}">
                 {% csrf_token %}
                 <div class="input-group">
                     <label for="text">Name </label>
@@ -23,7 +33,11 @@
                 </div>
                 <div class="input-group">
                     <label for="password">Password </label>
-                    <input type="password" name="password" id="password" placeholder="Enter Your Password" required>
+                    <input type="password" name="password1" id="password" placeholder="Enter Your Password" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Confirm Password </label>
+                    <input type="password" name="password2" id="password" placeholder="Re-Enter Your Password" required>
                 </div>
                 <button type="submit">Login</button>
             </form>
