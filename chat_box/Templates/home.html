@@ -1,31 +1,106 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Chat with Me</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/static/css/home.css">
 </head>
 <body>
 
     <!-- Home Page berfore login and register  -->
 
 
-    Hello World
+    <div class="home_page" style="height: 120em;">
 
-    <ul>
-        {% if user.is_authenticated %}
-        <li>
-            <a href="/logout">Logout</a> 
-        </li>
-        {% else %}
-        <li>
-            <a href="/login">Login</a> 
-        </li>
-        <li>
-            <a href="/register">Register</a> 
-        </li>
-        {% endif %}
-    </ul>
+        {% include 'navbar.html' %}
+
+
+        <div style="display: flex; padding: 1em 5em; margin-bottom: 15em; margin-top: 5em;">
+            <div>
+                <h2 style="font-size: 3.5em; margin-top: 1em; font-weight: bold; color: rgb(146, 13, 35);">A place for meaningful Conversations</h2>
+                <p style=" color: rgb(146, 13, 35); font-size: 1.5em; margin-top: 2em;">New communication app which allows you to make a FREE messages whenever and wherever you are, 24 hours a day!</p>
+
+                <button class="home_btn" style="padding: 0.5em 2em; font-size: 1.6em; margin-top: 2em; background-color: rgb(146, 13, 35); font-weight: bold; color: white; border: none; border-radius: 0.5em;">
+                    <a href="/register" style="color: white;">
+                        Register 
+                        <span>
+                            <svg class="hover-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8 4L16 12L8 20" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                    </a>
+                </button>
+            </div>
+    
+            <div>
+                <img src="/static/images/img.webp" alt="" style="height: 25em; margin-left: 10em; width: 45em;">
+            </div>
+            
+        </div>
+
+        
+
+        <div style="display: flex; border-radius: 2em; background-color: rgb(238, 141, 157); margin-left: 12em; margin-right: 12em; margin-bottom: 15em;">
+
+            <video autoplay loop muted style="height: 35em; border-radius: 2em; margin: 2em 3em;">
+                <source src="https://cdn.prod.website-files.com/6257adef93867e50d84d30e2%2F6787b62a9742f59453ba8919_Discord_Websote_Refresh_Emojis2_EN-transcode.mp4" data-wf-ignore="True">
+                <source src="https://cdn.prod.website-files.com/6257adef93867e50d84d30e2%2F6787b62a9742f59453ba8919_Discord_Websote_Refresh_Emojis2_EN-transcode.webm" data-wf-ignore="True">
+            </video>
+
+
+            <div style="margin-top: 5em; padding: 0em 3em 0em 0em;">
+                <h2 style="font-size: 3em; padding-right: 2em; font-weight: bold; color: white;">
+                    Make your chats more fun
+                </h2>
+                <p style="margin-top: 2em; font-size: 1.5em; color: white;">
+                    Use custom emojis, stickers, and soundboard effects! 🎉 Express yourself in voice, video, or text chats, set your avatar, choose a custom status, and personalize your profile to chat your way!
+                </p>
+            </div>
+
+
+        </div>
+
+
+        <footer style="background-color: rgb(146, 13, 35); ">
+            <p style="font-size: 1.3em; color: white; padding: 3em 33em 0em 33em;">Copyright &copy; Your Website 2023</p>
+
+            <p style="color: white; font-size: 10em; font-weight: bold; text-align: center;">CHAT WITH US</p>
+        </footer>
+
+
+        
+
+
+
+    </div>
+
+
+    
 
 </body>
 </html>
+
+
+
+
+
+<!-- <ul class="nav navbar-nav navbar-right">
+    {% if user.is_authenticated %}
+        <li>
+            <a href="/logout" style="color: white;">Logout</a> 
+        </li>
+        {% else %}
+        <li>
+            <a href="/login" style="color: white; padding: 1em; text-decoration: none;">Login</a> 
+        </li>
+        <li>
+            <a href="/register" style="color: white; padding: 1em;  text-decoration: none; ">Register</a> 
+        </li>
+    {% endif %}
+  </ul> -->

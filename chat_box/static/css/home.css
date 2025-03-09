@@ -1,0 +1,12 @@
+
+.home_page{
+    background-image: url('/static/images/bg-image.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+}
+
+/* .homePage_box{
+    background-color: rgb(212, 144, 156);
+} */
+

@@ -6,6 +6,8 @@ from django.contrib import messages
 
 # Create your views here.
 
+
+
 def home(request):
     return render(request , "home.html")
 
@@ -22,7 +24,7 @@ def loginpage(request):
 
         if user is not None:
             login(request , user)
-            return redirect('home')
+            return redirect('textArea')
         
         else:
             return redirect('login')
@@ -67,8 +69,12 @@ def register(request):
 
 
 
+def testArea(request):
+    
+    return render(request, 'textArea.html')
 
 
 # Neha111@ // Neha
 # 123456 // Anchal
 # 09870987 // kalash
+# Kalash // Kaushal664@

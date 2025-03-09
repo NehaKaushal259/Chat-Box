@@ -1,0 +1,32 @@
+
+
+
+
+
+
+
+<nav style=" display: flex; padding: 1.2em; font-size: 1.8em; font-weight: bold;">
+    <div style="color: rgb(216, 91, 112); margin-left: 3em; font-size: 1.6em; display: flex;">
+        <img src="/static/images/logo.png" alt="" style="height: 2em;">
+        <em>Chat With Me</em>
+    </div>
+
+    <div>
+        <ul style="list-style-type: none; display: flex; margin-left: 20em;">
+            {% if user.is_authenticated %}
+                <li>
+                    <a href="/logout" style="color: rgb(216, 91, 112); text-decoration: none;">Logout</a> 
+                </li>
+                {% else %}
+                <li>
+                    <a href="/login" style="color: rgb(216, 91, 112); padding: 1em; text-decoration: none;">Login</a> 
+                </li>
+                <li>
+                    <a href="/register" style="color: rgb(216, 91, 112); padding: 1em;  text-decoration: none; ">Register</a> 
+                </li>
+            {% endif %}
+        </ul>
+    </div>
+</nav>
+
+
